@@ -1,5 +1,7 @@
 Robofriends
 
+An React.JS application uses 
+
 ## Available Scripts
 
 ### `npm start`
