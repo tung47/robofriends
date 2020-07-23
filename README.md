@@ -1,6 +1,6 @@
-Robofriends
+Robofriends - a React + Redux robot list application.
 
-An React.JS application uses 
+A React.JS application shows 10 robot cards with name and email addresses. On top of the list, a search field with Redux can search and list the matching robot cards.
 
 ## Available Scripts
 
