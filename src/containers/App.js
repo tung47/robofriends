@@ -12,17 +12,17 @@ function App () {
     state.searchRobots.searchField,
     state.requestRobots.robots,
     state.requestRobots.getIsPending
-  ])
-  const dispatch = useDispatch()
+  ]);
+  const dispatch = useDispatch();
   
   useEffect(() => {
     dispatch(requestRobots());
   },[]);
 
-  const onSearchChange = (event) => dispatch(setSearchField(event.target.value))
+  const onSearchChange = (event) => dispatch(setSearchField(event.target.value));
   const filterRobots = robots.filter(robot => {
     return robot.name.toLowerCase().includes(searchField.toLowerCase());
-  })
+  });
   
   return isPending ? 
     <h1>Loading...</h1> : 
