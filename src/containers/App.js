@@ -16,10 +16,10 @@ function App () {
   const dispatch = useDispatch()
   
   useEffect(() => {
-    dispatch(requestRobots())
-  },[])
+    dispatch(requestRobots());
+  },[]);
 
-  const onSearchChange = (e) => dispatch(setSearchField(e.target.value))
+  const onSearchChange = (event) => dispatch(setSearchField(event.target.value))
   const filterRobots = robots.filter(robot => {
     return robot.name.toLowerCase().includes(searchField.toLowerCase());
   })
