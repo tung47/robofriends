@@ -8,13 +8,11 @@ import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 function App () {
-  const [searchField, robots, isPending, error] = useSelector(state => [
+  const [searchField, robots, isPending] = useSelector(state => [
     state.searchRobots.searchField,
     state.requestRobots.robots,
-    state.requestRobots.isPending,
-    state.requestRobots.error
+    state.requestRobots.getIsPending
   ])
-  
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -22,7 +20,6 @@ function App () {
   },[])
 
   const onSearchChange = (e) => dispatch(setSearchField(e.target.value))
-  
   const filterRobots = robots.filter(robot => {
     return robot.name.toLowerCase().includes(searchField.toLowerCase());
   })
